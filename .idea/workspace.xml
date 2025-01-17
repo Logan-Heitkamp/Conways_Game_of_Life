@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21ea5477-4fb2-4399-9f66-317698477c21" name="Changes" comment="">
+    <list default="true" id="21ea5477-4fb2-4399-9f66-317698477c21" name="Changes" comment="created grid visuals and movement">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/main.py" afterDir="false" />
     </list>
@@ -21,6 +21,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -29,12 +34,12 @@
     &quot;assignee&quot;: &quot;Logan-Heitkamp&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Logan-Heitkamp/Conways_Game_of_War.git&quot;,
-    &quot;accountId&quot;: &quot;3cf9983d-81b1-457d-9eaa-65e2ec961f5d&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Logan-Heitkamp/Conways_Game_of_War.git",
+    "accountId": "2122ec5e-6261-4df5-badf-07f2a22f06e4"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -49,7 +54,7 @@
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "feature/LH/basicGrid&&Movement",
     "last_opened_file_path": "C:/Users/xbox/IdeaProjects/Pandemic_Simulation",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -109,14 +114,27 @@
       <workItem from="1737056623208" duration="123000" />
       <workItem from="1737056784888" duration="668000" />
       <workItem from="1737071981362" duration="378000" />
-      <workItem from="1737072379307" duration="2808000" />
+      <workItem from="1737072379307" duration="3459000" />
     </task>
+    <task id="LOCAL-00001" summary="created grid visuals and movement">
+      <option name="closed" value="true" />
+      <created>1737075449471</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1737075449471</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="created grid visuals and movement" />
+    <option name="LAST_COMMIT_MESSAGE" value="created grid visuals and movement" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Conways_Game_of_War$main.coverage" NAME="main Coverage Results" MODIFIED="1737075205412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/source" />
+    <SUITE FILE_PATH="coverage/Conways_Game_of_War$main.coverage" NAME="main Coverage Results" MODIFIED="1737075861828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/source" />
   </component>
 </project>

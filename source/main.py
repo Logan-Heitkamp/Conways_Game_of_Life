@@ -45,9 +45,9 @@ if __name__ == "__main__":
 
         keys = pg.key.get_pressed()
         if keys[pg.K_LSHIFT]:
-            move_speed = (zoom // 4) * 5
+            move_speed = (zoom**2 // 4) * 5
         else:
-            move_speed = (zoom // 4)
+            move_speed = (zoom**1.05 // 4)
         if keys[pg.K_w]:
             camera[1] += move_speed
         if keys[pg.K_a]:
