@@ -1,1 +1,1 @@
-# Conways_Game_of_War
+# Conways_Game_of_Life
