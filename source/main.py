@@ -1,5 +1,6 @@
 import pygame as pg
 import sys
+import random
 
 def draw_screen(this_screen, camera_pos: list[int], tile_size: int, tiles: list[tuple[int, int]]) -> None:
     this_screen.fill((100, 100, 100))
@@ -17,12 +18,14 @@ def draw_screen(this_screen, camera_pos: list[int], tile_size: int, tiles: list[
 
     pg.display.flip()
 
-def get_number_surrounding_alive(tiles: dict[tuple[int, int], bool], tile: tuple[int, int]) -> int:
-    num = 0
+def get_surroundings(tile: tuple[int, int]) -> list[tuple[int, int]]:
     x: int = tile[0]
     y: int = tile[1]
-    surroundings = [(x+1, y-1), (x+1, y), (x+1, y+1), (x, y-1), (x, y+1), (x-1, y-1), (x-1, y), (x-1, y+1)]
+    return [(x+1, y-1), (x+1, y), (x+1, y+1), (x, y-1), (x, y+1), (x-1, y-1), (x-1, y), (x-1, y+1)]
 
+def get_number_surrounding_alive(tiles: dict[tuple[int, int], bool], tile: tuple[int, int]) -> int:
+    num = 0
+    surroundings = get_surroundings(tile)
     for surrounding_tile in surroundings:
         if surrounding_tile in tiles:
             if tiles[surrounding_tile]:
@@ -32,10 +35,7 @@ def get_number_surrounding_alive(tiles: dict[tuple[int, int], bool], tile: tuple
 
 def create_dead_tiles(tiles: dict[tuple[int, int], bool]) -> None:
     for each_tile in list(tiles.keys()):
-        x: int = each_tile[0]
-        y: int = each_tile[1]
-        surroundings = [(x+1, y-1), (x+1, y), (x+1, y+1), (x, y-1), (x, y+1), (x-1, y-1), (x-1, y), (x-1, y+1)]
-
+        surroundings = get_surroundings(each_tile)
         for surrounding_tile in surroundings:
             if surrounding_tile not in tiles:
                 tiles[surrounding_tile] = False
@@ -79,6 +79,15 @@ def change_tile(tiles: dict[tuple[int, int], bool], tile: tuple[int, int]):
         tiles[tile] = True
     purge_dead_tiles(tiles)
 
+def randomize(tiles: dict[tuple[int, int], bool]) -> None:
+    new_tiles = {}
+
+    for i in range(150):
+        for j in range(150):
+            new_tiles[(i-75, j-75)] = bool(random.getrandbits(1))
+
+    tiles.update(new_tiles)
+
 if __name__ == "__main__":
 
     # Setup Pygame
@@ -102,14 +111,23 @@ if __name__ == "__main__":
     while running:
         # Handle events
         for event in pg.event.get():
+
+            # Close Program
             if event.type == pg.QUIT:
                 running = False
+
+            # Get key presses
             if event.type == pg.KEYDOWN:
                 if event.key == pg.K_SPACE:
                     if play:
                         play = False
                     else:
                         play = True
+                if event.key == pg.K_r:
+                    randomize(grid)
+                    purge_dead_tiles(grid)
+
+            # Handle zoom
             if event.type == pg.MOUSEWHEEL:
                 if event.y > 0:
                     zoom += 5
@@ -122,6 +140,8 @@ if __name__ == "__main__":
                     else:
                         camera[0] = ((camera[0] - 600) / (zoom + 5)) * zoom + 600
                         camera[1] = ((camera[1] - 400) / (zoom + 5)) * zoom + 400
+
+            # Place tiles
             if event.type == pg.MOUSEBUTTONDOWN:
                 if event.button == 1:
                     if not play:
@@ -129,6 +149,7 @@ if __name__ == "__main__":
                         grid_pos = get_clicked_tile(mouse_pos, zoom, camera)
                         change_tile(grid, grid_pos)
 
+        # Movement Events
         keys = pg.key.get_pressed()
         if keys[pg.K_LSHIFT]:
             move_speed = (zoom**1.05 // 4) * 5
