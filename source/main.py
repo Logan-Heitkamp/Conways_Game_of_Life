@@ -7,7 +7,6 @@ def draw_screen(this_screen, camera_pos: list[int], tile_size: int, tiles: list[
     for tile in tiles:
         pg.draw.rect(this_screen, (255, 255, 255), pg.Rect((tile[0] * tile_size) + camera_pos[0], (tile[1] * tile_size) + camera_pos[1], tile_size, tile_size))
 
-
     for x in range(1200):
         if x % tile_size == 0:
             pg.draw.rect(this_screen, (0, 0, 0), pg.Rect(x + (camera_pos[0] % tile_size), 0, 1, 800))
@@ -15,8 +14,6 @@ def draw_screen(this_screen, camera_pos: list[int], tile_size: int, tiles: list[
     for y in range(800):
         if y % tile_size == 0:
             pg.draw.rect(this_screen, (0, 0, 0), pg.Rect(0, y + (camera_pos[1] % tile_size), 1200, 1))
-
-    pg.draw.circle(this_screen, (255, 0, 0), (600, 400),3)
 
     pg.display.flip()
 
@@ -93,7 +90,7 @@ if __name__ == "__main__":
     running = True
 
     # Setup Camera
-    camera = [600, 400]
+    camera: list[int] = [600, 400]
     move_speed = 1
     zoom = 50
 
@@ -116,22 +113,20 @@ if __name__ == "__main__":
             if event.type == pg.MOUSEWHEEL:
                 if event.y > 0:
                     zoom += 5
-                    camera[0] = ((camera[0] - 600) / (zoom - 2)) * zoom + 600
-                    camera[1] = ((camera[1] - 400) / (zoom - 2)) * zoom + 400
+                    camera[0] = ((camera[0] - 600) / (zoom - 5)) * zoom + 600
+                    camera[1] = ((camera[1] - 400) / (zoom - 5)) * zoom + 400
                 if event.y < 0:
                     zoom -= 5
                     if zoom < 5:
                         zoom = 5
                     else:
-                        camera[0] = ((camera[0] - 600) / (zoom + 2)) * zoom + 600
-                        camera[1] = ((camera[1] - 400) / (zoom + 2)) * zoom + 400
+                        camera[0] = ((camera[0] - 600) / (zoom + 5)) * zoom + 600
+                        camera[1] = ((camera[1] - 400) / (zoom + 5)) * zoom + 400
             if event.type == pg.MOUSEBUTTONDOWN:
                 if event.button == 1:
                     if not play:
                         mouse_pos = event.pos
-                        print(f'mouse: {mouse_pos}')
                         grid_pos = get_clicked_tile(mouse_pos, zoom, camera)
-                        print(f'tile: {grid_pos}')
                         change_tile(grid, grid_pos)
 
         keys = pg.key.get_pressed()
