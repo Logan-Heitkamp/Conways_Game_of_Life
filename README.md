@@ -22,9 +22,9 @@
  
  ## Running the Game
  
- bash
+ ```bash
  python source/main.py
- 
+ ```
  
  ## Game Rules
  
@@ -39,5 +39,6 @@
  
  The project uses pytest for testing. Run tests with:
  
- bash
+ ```bash
  pytest test/main_test.py
+```
