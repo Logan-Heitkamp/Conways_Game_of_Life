@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21ea5477-4fb2-4399-9f66-317698477c21" name="Changes" comment="fix zoom and remove debug code">
+    <list default="true" id="21ea5477-4fb2-4399-9f66-317698477c21" name="Changes" comment="created grid visuals and movement">
+      <change afterPath="$PROJECT_DIR$/test/main_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/main.py" afterDir="false" />
@@ -24,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="feature/LH/setup" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -37,13 +38,10 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Logan-Heitkamp/Conways_Game_of_Life.git&quot;,
-    &quot;accountId&quot;: &quot;939c5b8e-1284-4bde-b21a-0f7ec4be85f4&quot;
+    &quot;url&quot;: &quot;https://github.com/Logan-Heitkamp/Conways_Game_of_War.git&quot;,
+    &quot;accountId&quot;: &quot;3cf9983d-81b1-457d-9eaa-65e2ec961f5d&quot;
   }
 }</component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -55,27 +53,55 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python tests.Python tests for main_test.test_change_tile_not_in_grid.executor": "Run",
+    "Python tests.Python tests for main_test.test_change_tile_to_alive.executor": "Run",
+    "Python tests.Python tests for main_test.test_change_tile_to_dead.executor": "Run",
+    "Python tests.Python tests for main_test.test_create_dead_tiles.executor": "Run",
+    "Python tests.Python tests for main_test.test_draw_grid.executor": "Run",
+    "Python tests.Python tests for main_test.test_draw_screen.executor": "Run",
+    "Python tests.Python tests for main_test.test_draw_tiles.executor": "Run",
+    "Python tests.Python tests for main_test.test_get_clicked_tile_off_grid.executor": "Run",
+    "Python tests.Python tests for main_test.test_get_clicked_tile_on_grid.executor": "Run",
+    "Python tests.Python tests for main_test.test_get_number_surrounding_alive.executor": "Run",
+    "Python tests.Python tests for main_test.test_get_number_surrounding_alive_all.executor": "Run",
+    "Python tests.Python tests for main_test.test_get_surroundings.executor": "Run",
+    "Python tests.Python tests for main_test.test_purge_dead_tiles.executor": "Run",
+    "Python tests.Python tests for main_test.test_randomize_tiles_alive.executor": "Run",
+    "Python tests.Python tests for main_test.test_randomize_tiles_dead.executor": "Run",
+    "Python tests.Python tests for main_test.test_update_tiles_birth.executor": "Run",
+    "Python tests.Python tests for main_test.test_update_tiles_kill_alive_one.executor": "Run",
+    "Python tests.Python tests for main_test.test_update_tiles_no_alive.executor": "Run",
+    "Python tests.Python tests for main_test.test_update_tiles_overpopulation_four.executor": "Run",
+    "Python tests.Python tests in main_test.py.executor": "Run",
     "Python.main.executor": "Run",
-    "Python.test.executor": "Run",
+    "Python.testing.executor": "Run",
+    "RunOnceActivity.ChatTagsLlmMigration": "true",
+    "RunOnceActivity.CodyAccountHistoryMigration": "true",
+    "RunOnceActivity.CodyAccountsIdsRefresh": "true",
+    "RunOnceActivity.CodyAssignOrphanedChatsToActiveAccount": "true",
+    "RunOnceActivity.CodyConvertUrlToCodebaseName": "true",
+    "RunOnceActivity.CodyHistoryLlmMigration": "true",
+    "RunOnceActivity.CodyMigrateChatHistory-v2": "true",
+    "RunOnceActivity.CodyProjectSettingsMigration": "true",
+    "RunOnceActivity.DeprecatedChatLlmMigration": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.ToggleCodyToolWindowAfterMigration": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/xbox/IdeaProjects/Pandemic_Simulation",
+    "last_opened_file_path": "C:/Users/Logan/PycharmProjects/Pandemic_Simulation",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "advanced.settings",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.main">
+  <component name="PyCoverageOptionsProvider">
+    <option name="myUseBundledCoveragePy" value="true" />
+  </component>
+  <component name="RunManager" selected="Python tests.Python tests in main_test.py">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Conways_Game_of_Life" />
       <option name="ENV_FILES" value="" />
@@ -99,35 +125,87 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for main_test.test_draw_grid" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Conways_Game_of_Life" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/source" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/source/test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;main_test.test_draw_grid&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for main_test.test_randomize_tiles_alive" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Conways_Game_of_Life" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;main_test.test_randomize_tiles_alive&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for main_test.test_randomize_tiles_dead" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Conways_Game_of_Life" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;main_test.test_randomize_tiles_dead&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in main_test.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Conways_Game_of_Life" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test/main_test.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests in main_test.py" />
+        <item itemvalue="Python tests.Python tests for main_test.test_draw_grid" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.test" />
+        <item itemvalue="Python tests.Python tests for main_test.test_randomize_tiles_dead" />
+        <item itemvalue="Python tests.Python tests for main_test.test_randomize_tiles_alive" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-PY-242.20224.428" />
+        <option value="bundled-python-sdk-80e8e15d2b92-39cff9de6eef-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.20224.428" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -141,11 +219,8 @@
       <workItem from="1737056784888" duration="668000" />
       <workItem from="1737071981362" duration="378000" />
       <workItem from="1737072379307" duration="3459000" />
-      <workItem from="1739040717847" duration="85000" />
-      <workItem from="1739040817806" duration="299000" />
-      <workItem from="1739041120611" duration="65000" />
-      <workItem from="1739041198177" duration="136000" />
-      <workItem from="1739041343400" duration="1695000" />
+      <workItem from="1739299347679" duration="4315000" />
+      <workItem from="1739473184884" duration="4835000" />
     </task>
     <task id="LOCAL-00001" summary="created grid visuals and movement">
       <option name="closed" value="true" />
@@ -155,15 +230,7 @@
       <option name="project" value="LOCAL" />
       <updated>1737075449471</updated>
     </task>
-    <task id="LOCAL-00002" summary="fix zoom and remove debug code">
-      <option name="closed" value="true" />
-      <created>1739041662211</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1739041662211</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,12 +238,16 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="created grid visuals and movement" />
-    <MESSAGE value="fix zoom and remove debug code" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix zoom and remove debug code" />
+    <option name="LAST_COMMIT_MESSAGE" value="created grid visuals and movement" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Conways_Game_of_War$main.coverage" NAME="main Coverage Results" MODIFIED="1737075861828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/source" />
-    <SUITE FILE_PATH="coverage/Conways_Game_of_Life$test.coverage" NAME="test Coverage Results" MODIFIED="1739042754938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/source" />
-    <SUITE FILE_PATH="coverage/Conways_Game_of_Life$main.coverage" NAME="main Coverage Results" MODIFIED="1739042857275" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/source" />
+    <SUITE FILE_PATH="coverage/Conways_Game_of_War$main.coverage" NAME="main Coverage Results" MODIFIED="1739213455707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/source" />
+    <SUITE FILE_PATH="coverage/Conways_Game_of_War$useless.coverage" NAME="useless Coverage Results" MODIFIED="1738954843889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/source" />
+    <SUITE FILE_PATH="coverage/Conways_Game_of_War$prime.coverage" NAME="prime Coverage Results" MODIFIED="1737572141407" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/source" />
+    <SUITE FILE_PATH="coverage/Conways_Game_of_Life$.coverage" NAME=" Coverage Results" MODIFIED="1739476239981" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Conways_Game_of_War$.coverage" NAME=" Coverage Results" MODIFIED="1739214459210" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Conways_Game_of_Life$main.coverage" NAME="main Coverage Results" MODIFIED="1739475734186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/source" />
+    <SUITE FILE_PATH="coverage/Conways_Game_of_Life$testing.coverage" NAME="testing Coverage Results" MODIFIED="1739312765443" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/source" />
+    <SUITE FILE_PATH="coverage/Conways_Game_of_War$testing.coverage" NAME="testing Coverage Results" MODIFIED="1739039133115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/source" />
   </component>
 </project>
